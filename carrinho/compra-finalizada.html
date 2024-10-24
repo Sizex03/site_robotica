@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Compra Finalizada</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Compra Finalizada com Sucesso!</h1>
+        <p>Obrigado por sua compra! Você receberá um e-mail de confirmação em breve.</p>
+        
+        <h2>Produtos Comprados:</h2>
+        <div id="produtos"></div> 
+
+        <button onclick="window.location.href='index.html'" class="finalizar-btn">Voltar à Página Inicial</button>
+    </div>
+
+    <!-- <script>
+        // Função para carregar produtos comprados
+        function carregarProdutosComprados() {
+            const produtosDiv = document.getElementById('produtos');
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            if (carrinho.length > 0) {
+                carrinho.forEach(produto => {
+                    const produtoDiv = document.createElement('div');
+                    produtoDiv.className = 'produto'; 
+                    produtoDiv.innerHTML = `<strong>${produto.nome}</strong> - R$${produto.preco.toFixed(2)}`;
+                    produtosDiv.appendChild(produtoDiv);
+                });
+                localStorage.removeItem('carrinho'); // Limpa o carrinho após a compra
+            } else {
+                produtosDiv.innerHTML = '<p>Nenhum produto foi comprado.</p>';
+            }
+        }
+
+        // Carrega os produtos ao abrir a página
+        window.onload = function() {
+            carregarProdutosComprados();
+        };
+    </script> -->
+</body>
+</html>

@@ -3,67 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrinho.css">
-    <title>Finalização de Compra</title>
+    <link rel="stylesheet" href="carrinho.css"> <!-- Link para o CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-qrcode/1.0/jquery.qrcode.min.js"></script>
+    <title>Carrinho de Compras</title>
 </head>
 <body>
     <div class="container">
-        <h1>Finalização de Compra</h1>
-        <div id="produtos">
-            <h2>Produtos no Carrinho</h2>
-            <ul id="lista-produtos"></ul>
-            <p id="valor-total">Valor Total: R$ 0.00</p>
-            <p id="frete">Frete: R$ 0.00</p>
-            <p id="valor-final">Valor Final: R$ 0.00</p>
-        </div>
+        <h1>Carrinho de Compras</h1>
+        <div id="produtos"></div> <!-- Aqui os produtos serão exibidos -->
 
-        <div id="endereco">
-            <h2>Endereço de Entrega</h2>
-            <input type="text" id="logradouro" placeholder="Logradouro" required>
-            <input type="text" id="numero" placeholder="Número" required>
-            <input type="text" id="bairro" placeholder="Bairro" required>
-            <input type="text" id="cidade" placeholder="Cidade" required>
-            <input type="text" id="estado" placeholder="Estado" required>
-        </div>
+        <h2>Endereço de Entrega:</h2>
+        <form id="enderecoForm">
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="text" placeholder="Rua, Número" required>
+            <input type="text" placeholder="Bairro" required>
+            <input type="text" placeholder="Cidade" required>
+            <input type="text" placeholder="Estado" required>
+            <input type="text" placeholder="CEP" required>
+        </form>
 
-        <div id="pagamento">
-            <h2>Forma de Pagamento</h2>
-            <label>
-                <input type="radio" name="pagamento" value="pix" onchange="togglePagamentoFields()"> Pix
-            </label>
-            <label>
-                <input type="radio" name="pagamento" value="cartao" onchange="togglePagamentoFields()"> Cartão de Crédito
-            </label>
-
-            <div id="pix-field" class="pagamento-field" style="display: none;">
-                <h3>QR Code</h3>
-                <div id="qrcode"></div>
+        <h2>Pagamento:</h2>
+        <div id="payment-methods">
+            <div>
+                <label for="pix">Pagamento via PIX</label>
+                <input type="radio" name="payment" id="pix" value="pix" checked>
             </div>
-
-            <div id="cartao-field" class="pagamento-field" style="display: none;">
-                <h3>Dados do Cartão</h3>
-                <input type="text" id="numero-cartao" placeholder="Número do Cartão" required>
-                <input type="text" id="nome-titular" placeholder="Nome do Titular" required>
-                <input type="text" id="validade" placeholder="Validade (MM/AA)" required>
-                <input type="text" id="cvv" placeholder="CVV" required>
-                <label>
-                    Parcelas:
-                    <select id="parcelas">
-                        <option value="1">1x</option>
-                        <option value="2">2x</option>
-                        <option value="3">3x</option>
-                        <option value="4">4x</option>
-                        <option value="5">5x</option>
-                        <option value="6">6x</option>
-                    </select>
-                </label>
+            <div>
+                <label for="cartao">Cartão de Crédito</label>
+                <input type="radio" name="payment" id="cartao" value="cartao">
             </div>
         </div>
 
-        <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+        <div class="qr-container" id="qrCodeContainer">
+            <h3>QRCode do Pagamento:</h3>
+            <div id="qrCode"></div> <!-- Onde o QR Code será gerado -->
+        </div>
+
+        <div id="cartaoForm" style="display: none;">
+            <h3>Dados do Cartão:</h3>
+            <input type="text" placeholder="Número do Cartão" required>
+            <input type="text" placeholder="Nome no Cartão" required>
+            <input type="text" placeholder="Validade (MM/AA)" required>
+            <input type="text" placeholder="CVV" required>
+            <input type="number" placeholder="Quantidade de Parcelas" required min="1">
+        </div>
+
+        <button id="finalizarCompra" class="finalizar-btn">Finalizar Compra</button>
     </div>
 
-    <script src="carrinho.js"></script>
-    <script src="qrcode.min.js"></script>
+    <script src="carrinho.js"></script> <!-- Link para o JavaScript -->
 </body>
 </html>
