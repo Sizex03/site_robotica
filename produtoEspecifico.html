@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboStart - Transformando ideias em código</title>
+    <link rel="stylesheet" href="stylesEspecificos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>RoboStart</h1>
+        </div>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#competitivos">Kits de Montagem</a>
+            <a href="#educacionais">Acessórios</a>
+            <a href="#">Componentes Eletrônicos</a>
+            <div class="search-container">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." oninput="filterProducts()">
+                    <button>🔍</button>
+                </div>
+            </div>
+            <a href="#">login/cadastro</a>
+            <button id="cart-button">
+                🛒 <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-detail">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/400" alt="Imagem do produto">
+            </div>
+            <div class="product-info">
+                <h2>Robô Assistente Doméstico</h2>
+                <p class="price">R$ 2.499,99</p>
+                <p class="description">
+                    Este robô assistente doméstico é perfeito para ajudar nas tarefas diárias. Ele pode limpar, organizar e até fazer pequenas compras.
+                </p>
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+        <section class="related-products">
+            <h3>Produtos Relacionados</h3>
+            <div class="related-list">
+                <div class="related-item">
+                    <img src="https://via.placeholder.com/150" alt="Produto relacionado">
+                    <p>Robô Limpeza Inteligente</p>
+                </div>
+                <div class="related-item">
+                    <img src="https://via.placeholder.com/150" alt="Produto relacionado">
+                    <p>Robô Assistente de Cozinha</p>
+                </div>
+                <div class="related-item">
+                    <img src="https://via.placeholder.com/150" alt="Produto relacionado">
+                    <p>Robô de Segurança Residencial</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RobotShop - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-/* Estilos gerais */
 /*cabeçalho*/
 body {
     font-family: Arial, sans-serif;
@@ -80,88 +79,107 @@ nav a:hover {
     top: -5px;
     right: -10px; /* Ajuste a posição conforme necessário */
 }
-/*---cabeçalho
+/*---cabeçalho*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-
-
-/* Carrossel */
-.carousel {
+main {
+    max-width: 1200px;
+    margin: 40px auto;
     display: flex;
-    overflow: hidden;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-}
-
-/* Produtos */
-.produtos {
-    text-align: center;
-    background-color: #fff;
+.product-detail {
+    display: flex;
+    gap: 20px;
+    background-color: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
 }
 
-.produto-lista {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.product-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
-.produto-item {
-    width: 30%;
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
+.product-info {
+    max-width: 500px;
 }
 
-.produto-item button {
-    padding: 10px 15px;
-    background-color: #333; /* Cor do botão */
+.product-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; 
-
 }
 
-.produto-item button:hover{
-    background-color: #636363; /* Cor do botão ao passar o mouse */
+button:hover {
+    background-color: #1c86ee;
 }
 
+.related-products {
+    width: 80%;
+    margin-top: 40px;
+}
 
- 
+.related-products h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
 
-
-.tutoriais-lista{
+.related-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-/* Tutoriais */
-.tutoriais {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-}
-
-/* Sobre nós */
-.sobre-nos {
-    padding: 20px;
-    background-color: #f9f9f9;
+.related-item {
     text-align: center;
 }
 
-/* Rodapé */
+.related-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
 footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
+    margin-top: 50px;
+    background-color: #1e90ff;
+    color: white;
     text-align: center;
+    padding: 10px;
 }
