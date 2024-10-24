@@ -1,207 +1,175 @@
-
- <!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ROBOSTART</title>
-    <link rel="stylesheet" href="styles.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboStart - Transformando ideias em código</title>
+    <link rel="stylesheet" href="stylesindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <a href="#" class="logo"><img src="./images/logo.png" alt="Logo" /></a>   
-        <!-- adicionar a nossa logo -->
+        <div class="logo">
+            <h1>RoboStart</h1>
+        </div>
         <nav>
-            <ul class="navmenu">
-                <li><a href="#">Página Inicial</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Novos produtos!</a></
-                <li><a href="#"></a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <!-- apresentação da empresa -->
-            </ul>
+            <a href="#produtos">Produtos</a>
+            <a href="#competitivos">Kits de Montagem</a>
+            <a href="#educacionais">Acessórios</a>
+            <a href="#">Componentes Eletrônicos</a>
+            <div class="search-container">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." oninput="filterProducts()">
+                    <button>🔍</button>
+                </div>
+            </div>
+            <a href="#">login/cadastro</a>
+            <button id="cart-button">
+                🛒 <span id="cart-count">0</span>
+            </button>
         </nav>
-        <div class="nav-icon">
-            <a href="#"><i class="bx bx-search"></i></a>
-            <a href="#"><i class="bx bx-user"></i></a>
-            <a href="#"><i class="bx bx-cart"></i></a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
     </header>
+  
 
-    <main>
-        <section class="main-home">
-            <div class="main-text">
-                <h5>Novos proutos - evidencia</h5>
-                <h1>Novos produtos <br />de robótica</h1>
-                <p>Transformando ideias em código </p>
-                <a href="#" class="main-btn">COMPRE AGORA<i class="bx bx-right-arrow-alt"></i></a>
-            </div>
-            <div class="down-arrow">
-                <a href="#trending" class="down"><i class="bx bx-down-arrow-alt"></i></a>
-            </div>
-        </section>
-
-        <section class="trending-product" id="trending">
-            <div class="center-text">
-                <h2>Principais <span>Produtos</span></h2>
-            </div>
-            <div class="products">
-                <div class="row">
-                    <img src="." alt="produto 1" />
-                    <div class="product-info">
-                        <h5>PROMOÇÃO</h5>
-                        <div class="heart-icon"><i class="bx bx-heart"></i></div>
-                        <div class="rating">
-                            <i class="bx bx-star"></i>
-                            <i class="bx bx-star"></i>
-                            <i class="bx 
-                            bx-star"></i>
-                            <i class="bx bx-star"></i>
-                            <i class="bx bxs-star-half"></i>
-                        </div>
-                        <div class="price">
-                            <h4>robô 1</h4>
-                            <p>R$20,00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <img src="." alt="Produto 2" />
-                    <div class="product-info">
-                        <h5>Novo</h5>
-                        <div class="heart-icon"><i class="bx bx-heart"></i></div>
-                        <div class="rating">
-                            <i class="bx bx-star"></i>
-                            <i class="bx bx-star"></i>
-                            <i class="bx bx-star"></i>
-                            <i class="bx bx-star"></i>
-                            <i class="bx bxs-star-half"></i>
-                        </div>
-                        <div class="price">
-                            <h4>Produto 2</h4>
-                            <p>R$ 10,00</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- novos produtos -->
-            </div>
-        </section>
-
-        <section class="client-reviews">
-            <div class="reviews">
-                <h3>Comentários de clientes ou apresentação do CEO</h3>
-                <img src="." alt="fulano 1" />
-                <p>avaliação</p>
-                <h2>nome do fulano</h2>
-                <p>funçãoo do fulano</p>
-            </div>
-        </section>
-
-        <section class="update-news">
-            <div class="up-center-text">
-                <h2>Atualizações -- noticias da área</h2>
-            </div>
-            <div class="update-cart">
-                <div class="cart">
-                    <img src="." alt="noticia 1" />
-                    <h5>ddata</h5>
-                    <h4>fhtjh.</h4>
-                    <p>gsdgsdg</p> 
-                   <h6>fhfh</h6>
-                </div>
-                <!-- Repeat similar structure for other updates -->
-                <div class="cart">
-                    <img src="." alt="noticia 2" />
-                    <h5>data</h5>
-                    <h4>fhtjh.</h4>
-                    <p>gsdgsdg</p> 
-                   <h6>fhfh</h6>
-                </div>
-                <div class="cart">
-                    <img src="" alt="noticia 3" />
-                    <h5>data</h5>
-                    <h4>fhtjh.</h4>
-                    <p>gsdgsdg</p> 
-                   <h6>fhfh</h6>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact">
-            <div class="contact-info">
-                <div class="first-info">
-                    <img src="" alt="Logo" />
-                    <p>endereço tal, <br>tal</p>
-                    <p>telefone tal</p>
-                    <p>emaileamail@email.com</p>
-                    <div class="social-icon">
-                        <a href="#"><i class='bx bxl-facebook'></i></a>
-                        <a href="#"><i class='bx bxl-twitter'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bxl-youtube'></i></a>
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    </div>
-                </div>
-                <div class="second-info">
-                    <h4>Suporte</h4>
-                    <p>Contate-nos</p>
-                    <p>Privacidade</p>
-                </div>
-                <div class="third-info">
-                    <h4>Newsletter</h4>
-                    <p>coloque seu email para receber atualizações</p>
-                    <input type="email" placeholder="digite o email" />
-                    <button>Enviar</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p> grupo 1 rodapé</p>
-    </footer>
-
-
-    <section class="category-list">
-        <h2>Categorias de Produtos</h2>
-        <div class="category">
-            <a href="arduino.html">
-                <h3>Arduino</h3>
-                <p>Explore placas, kits e acessórios para seus projetos de robótica.</p>
-            </a>
+    <!-- Carrossel -->
+    <section class="carousel">
+        <div class="carousel-item">
+            <img src="capa1.jpg" alt="Capa 1">
         </div>
-        <div class="category">
-            <a href="leds.html">
-                <h3>LEDs</h3>
-                <p>Uma variedade de LEDs para suas criações eletrônicas.</p>
-            </a>
+        <div class="carousel-item">
+            <img src="capa2.jpg" alt="Capa 2">
         </div>
-        <div class="category">
-            <a href="sensores.html">
-                <h3>Sensores</h3>
-                <p>Sensores para medir e detectar diferentes parâmetros.</p>
-            </a>
+        <div class="carousel-item">
+            <img src="capa3.jpg" alt="Capa 3">
         </div>
-        <div class="category">
-            <a href="microprocessadores.html">
-                <h3>Microprocessadores</h3>
-                <p>Componentes essenciais para o controle de projetos eletrônicos.</p>
-            </a>
+        <div class="carousel-item">
+            <img src="capa4.jpg" alt="Capa 4">
         </div>
-        <div class="category">
-            <a href="kits.html">
-                <h3>Kits de Montagem</h3>
-                <p>Kits completos para iniciar seus projetos de robótica.</p>
-            </a>
+        <div class="carousel-item">
+            <img src="capa5.jpg" alt="Capa 5">
         </div>
     </section>
+
+    <!-- Produtos Mais Vendidos -->
+    <section class="produtos">
+        <h2>Produtos Mais Vendidos</h2>
+        <div class="produto-lista">
+            <!-- Repetir para cada produto -->
+            <div class="produto-item">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1</p>
+                <p>Preço: R$100,00</p>
+                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <!-- Repetir outros 5 produtos -->
+        
+    
+            <!-- Repetir para cada produto -->
+            <div class="produto-item">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1</p>
+                <p>Preço: R$100,00</p>
+                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <!-- Repetir outros 5 produtos -->
+    
+        
+            <!-- Repetir para cada produto -->
+            <div class="produto-item">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1</p>
+                <p>Preço: R$100,00</p>
+                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <!-- Repetir outros 5 produtos -->
+        
+        
+            <!-- Repetir para cada produto -->
+            <div class="produto-item">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1</p>
+                <p>Preço: R$100,00</p>
+                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <!-- Repetir outros 5 produtos -->
+        
+        
+            <!-- Repetir para cada produto -->
+            <div class="produto-item">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1</p>
+                <p>Preço: R$100,00</p>
+                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <!-- Repetir outros 5 produtos -->
+        
+            <!-- Repetir para cada produto -->
+            <div class="produto-item">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1</p>
+                <p>Preço: R$100,00</p>
+                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <!-- Repetir outros 5 produtos -->
+        </div>
+    </section>
+
+    <!-- Tutoriais de Práticas de Robótica -->
+    <section class="tutoriais">
+        <h2>Tutoriais de Práticas de Robótica</h2>
+    <div class="tutoriais-lista">
+        <div class="tutorial-item">
+            <h3>Tutorial 1</h3>
+            <video controls>
+                <source src="tutorial1.mp4" type="video/mp4">
+            </video>
+            <p>Descrição do Tutorial 1</p>
+        </div>
+        <div class="tutorial-item">
+            <h3>Tutorial 1</h3>
+            <video controls>
+                <source src="tutorial1.mp4" type="video/mp4">
+            </video>
+            <p>Descrição do Tutorial 1</p>
+        </div>
+         <div class="tutorial-item">
+            <h3>Tutorial 1</h3>
+            <video controls>
+                <source src="tutorial1.mp4" type="video/mp4">
+            </video>
+            <p>Descrição do Tutorial 1</p>
+        </div>
+    </div>
+        <!-- Repetir para os outros dois tutoriais -->
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>A RoboStart é uma empresa dedicada a transformar ideias em código, oferecendo soluções de robótica e programação para entusiastas e profissionais.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <h3>Contate-nos</h3>
+        <p>Email: contato@robostart.com.br</p>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Endereço: Rua Exemplo, 123, São Paulo, SP</p>
+    </footer>
+
+    <script src="scriptIndex.js"></script>
 </body>
 </html>
