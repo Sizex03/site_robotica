@@ -1,6 +1,5 @@
 // script.js
 
-// Função para carregar produtos do carrinho
 function carregarProdutos() {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     const produtosDiv = document.getElementById('produtos');
@@ -8,12 +7,12 @@ function carregarProdutos() {
     if (carrinho.length > 0) {
         carrinho.forEach(produto => {
             const produtoDiv = document.createElement('div');
-            produtoDiv.className = 'produto'; // Aplica a classe de estilo
+            produtoDiv.className = 'produto'; 
             produtoDiv.innerHTML = `<strong>${produto.nome}</strong> - R$${produto.preco.toFixed(2)}`;
             produtosDiv.appendChild(produtoDiv);
         });
         
-        // Gerar QR Code com o valor total da compra
+       
         const valorTotal = carrinho.reduce((total, produto) => total + produto.preco, 0).toFixed(2);
         $('#qrCode').qrcode({
             text: 'Pagamento de R$' + valorTotal, // Texto do QR Code
@@ -39,10 +38,9 @@ function finalizarCompra() {
         alert('Nenhum produto no carrinho!');
         return;
     }
-    
-    // Aqui você pode adicionar qualquer validação adicional
 
-    // Redireciona para a página de compra finalizada
+
+    
     window.location.href = 'compra-finalizada.html'; 
 }
 
