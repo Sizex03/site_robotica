@@ -15,8 +15,9 @@
         <nav>
             <a href="#produtos">Produtos</a>
             <a href="#competitivos">Kits de Montagem</a>
-            <a href="#educacionais">Acessórios</a>
-            <a href="#">Componentes Eletrônicos</a>
+            <a href="#educacionais">Companheiros</a>
+            <a href="#">Robótica de cunsumo</a>
+            <a href="#">educação</a>
             <div class="search-container">
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Pesquisar produtos..." oninput="filterProducts()">
@@ -28,6 +29,24 @@
             </button>
         </nav>
     </header>
+     <!-- Carrossel -->
+     <section class="carouseel">
+        <div class="carouseel-item">
+            <img src="capa1.jpg" alt="Capa 1">
+        </div>
+        <div class="carouseel-item">
+            <img src="capa2.jpg" alt="Capa 2">
+        </div>
+        <div class="carouseel-item">
+            <img src="capa3.jpg" alt="Capa 3">
+        </div>
+        <div class="carouseel-item">
+            <img src="capa4.jpg" alt="Capa 4">
+        </div>
+        <div class="carouseel-item">
+            <img src="capa5.jpg" alt="Capa 5">
+        </div>
+    </section>
     
     <main>
         <section id="products">
@@ -38,57 +57,57 @@
                     <!-- Adicionando 10 produtos -->
                     <div class="product-card">
                         <img class="product-image" src="../imagens/robo1.png" alt="Produto 1" data-hover="../imagens/robo-cachorro.jpg" data-default="../imagens/robo1.png">
-                        <h2>Robô Programável</h2>
-                        <p>Descrição do robô programável. Ideal para iniciantes.</p>
+                        <h2>MechDog</h2>
+                        <p>MechDog é um pequeno, mas poderoso cão robô equipado com um controlador ESP32, perfeito para iniciantes!</p>
                         <span>R$ 299,99</span>
-                        <button onclick="addToCart('Robô Programável')">Adicionar ao Carrinho</button>
+                        <button onclick="addToCart('MechDog')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/braço-robo1.png" alt="Produto 2" data-hover="../imagens/braço-robo2.png" data-default="../imagens/braço-robo1.png">
-                        <h2>Robô Competitivo</h2>
-                        <p>Descrição do robô competitivo. Perfeito para competições.</p>
+                        <h2>Braço Robótico</h2>
+                        <p>Esse é o modelo de braço robótico mais utilizado nas industrias e pequenas empresas!</p>
                         <span>R$ 499,99</span>
                         <button onclick="addToCart('Robô Competitivo')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/braço_mecanico1.png" alt="Produto 3" data-hover="../imagens/braço_mecanico2.png" data-default="../imagens/braço_mecanico1.png">
-                        <h2>Robô Educacional</h2>
-                        <p>Descrição do robô educacional. Aprenda enquanto brinca!</p>
+                        <h2>Braço Robótico Modular</h2>
+                        <p>Esse braços robótico possui a flexibilidade que você necessita!</p>
                         <span>R$ 199,99</span>
-                        <button onclick="addToCart('Robô Educacional')">Adicionar ao Carrinho</button>
+                        <button onclick="addToCart('Braço Robótico Modular')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/robo_amigo.png" alt="Produto 4" data-hover="../imagens/robo_amigo2.png" data-default="../imagens/robo_amigo.png">
-                        <h2>Robô de Montagem</h2>
-                        <p>Construa e programe seu próprio robô!</p>
+                        <h2>Robô Assistente Doméstico</h2>
+                        <p>Este robô será seu companheiro do dia a dia, auxiliando em suas tarefas.</p>
                         <span>R$ 350,00</span>
-                        <button onclick="addToCart('Robô de Montagem')">Adicionar ao Carrinho</button>
+                        <button onclick="addToCart('Robô Assistente Doméstico')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/robo_limpeza1.png" alt="Produto 5" data-hover="../imagens/robo_limpeza2.png" data-default="../imagens/robo_limpeza1.png">
-                        <h2>Robô de Códigos</h2>
-                        <p>Aprenda programação com este robô divertido.</p>
+                        <h2>Caixa de Areia Automática</h2>
+                        <p>Com essa caixa de areia que se auto-higieniza, seus dias como "pai de pet" se tornarão mais fáceis!</p>
                         <span>R$ 220,00</span>
-                        <button onclick="addToCart('Robô de Códigos')">Adicionar ao Carrinho</button>
+                        <button onclick="addToCart('Caixa de Areia Automática')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/robo_limpeza3.png" alt="Produto 6" data-hover="../imagens/robo_limpeza4.png" data-default="../imagens/robo_limpeza3.png">
-                        <h2>Robô Articulado</h2>
-                        <p>Um robô com movimentos realistas.</p>
+                        <h2>Caixa de Areia Automática 2.0</h2>
+                        <p>Essa caixa de areia é o modelo de automatização de limpeza mais atual do mercado.</p>
                         <span>R$ 450,00</span>
-                        <button onclick="addToCart('Robô Articulado')">Adicionar ao Carrinho</button>
+                        <button onclick="addToCart('Caixa de Areia Automática 2.0')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/robo-simples.png" alt="Produto 7" data-hover="../imagens/robo-simples2.png" data-default="../imagens/robo-simples.png">
-                        <h2>Robô de Reconhecimento</h2>
-                        <p>Reconhece sons e responde a comandos.</p>
+                        <h2>Kit Robô Simples</h2>
+                        <p>Com este kit você pode aprender a montagem básica de um mini carro robótico!</p>
                         <span>R$ 500,00</span>
                         <button onclick="addToCart('Robô de Reconhecimento')">Adicionar ao Carrinho</button>
                     </div>
                     <div class="product-card">
                         <img class="product-image" src="../imagens/drone.png" alt="Produto 1" data-hover="../imagens/drone2.png" data-default="../imagens/drone.png">
-                        <h2>Robô Musical</h2>
-                        <p>Um robô que toca músicas!</p>
+                        <h2>Drone 2.0</h2>
+                        <p>Um drone com mais funções e com uma melhor qualidade de imagem.</p>
                         <span>R$ 300,00</span>
                         <button onclick="addToCart('Robô Musical')">Adicionar ao Carrinho</button>
                     </div>
@@ -112,7 +131,7 @@
     </footer>
     </main>
     <script src="scriptProdutos.js"></script>
-    <script src="script.js"></script>
+    
 
 
     

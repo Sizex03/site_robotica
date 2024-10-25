@@ -1,6 +1,17 @@
-let currentIndex = 0;
+// Função de Carrossel
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carouseel-item");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${100 * (i - index)}%)`;
+    });
+}
+
+
 
 function moveCarousel(direction, trackId) {
+    let currentIndex = 0;
     const track = document.getElementById(trackId);
     const totalProducts = track.children.length;
     const productsToShow = 3; // Número de produtos exibidos de cada vez
@@ -22,7 +33,7 @@ let cartCount = 0; // Variável para contar itens no carrinho
 function addToCart(productName) {
     cartCount++; // Incrementa o contador de itens no carrinho
     document.getElementById('cart-count').textContent = cartCount; // Atualiza o contador no botão
-    alert(`${productName} foi adicionado ao carrinho!`);
+    
 }
 
     const productImages = document.querySelectorAll('.product-image');

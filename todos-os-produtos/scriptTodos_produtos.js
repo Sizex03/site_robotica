@@ -1,11 +1,9 @@
-let cartCount = 0;
-
-document.getElementById('addToCart').addEventListener('click', function() {
-    const quantity = parseInt(document.getElementById('quantity').value);
-    cartCount += quantity;
-    document.getElementById('cart-count').innerText = cartCount;
+let cartCount = 0; // Variável para contar itens no carrinho
+function addToCart(productName) {
+    cartCount++; // Incrementa o contador de itens no carrinho
+    document.getElementById('cart-count').textContent = cartCount; // Atualiza o contador no botão
     
-});
+}
 
 // Função de Carrossel
 let currentSlide = 0;
