@@ -35,18 +35,18 @@
             </div>
         </div>
 
-        <div class="qr-container" id="qrCodeContainer">
-            <h3>QRCode do Pagamento:</h3>
-            <div id="qrCode"></div> 
-        </div>
-
-        <div id="cartaoForm" style="display: none;">
+        <div id="cartaoForm" style="display: none;"> <!-- Formulário que aparece ao selecionar Cartão -->
             <h3>Dados do Cartão:</h3>
             <input type="text" placeholder="Número do Cartão" required>
             <input type="text" placeholder="Nome no Cartão" required>
             <input type="text" placeholder="Validade (MM/AA)" required>
             <input type="text" placeholder="CVV" required>
             <input type="number" placeholder="Quantidade de Parcelas" required min="1">
+        </div>
+
+        <div class="qr-container" id="qrCodeContainer">
+            <h3>QRCode do Pagamento:</h3>
+            <div id="qrCode"></div> 
         </div>
 
         <button id="finalizarCompra" class="finalizar-btn">Finalizar Compra</button>

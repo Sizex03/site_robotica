@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adicionar informações de compras anteriores
     const comprasAnteriores = document.getElementById('compras-anteriores');
     const compras = [
-        { id: 1, produto: 'Produto A', data: '2024-01-15', valor: 'R$ 100,00', quantidade: 2, frete: 'R$ 10,00', formaPagamento: 'Cartão de Crédito', valorTotal: 'R$ 210,00', valorPorProduto: 'R$ 100,00' },
-        { id: 2, produto: 'Produto B', data: '2024-02-20', valor: 'R$ 150,00', quantidade: 1, frete: 'R$ 15,00', formaPagamento: 'Boleto', valorTotal: 'R$ 165,00', valorPorProduto: 'R$ 150,00' },
-        { id: 3, produto: 'Produto C', data: '2024-03-10', valor: 'R$ 200,00', quantidade: 3, frete: 'R$ 20,00', formaPagamento: 'PayPal', valorTotal: '620,00', valorPorProduto: 'R$ 200,00' },
+        { id: 1, produto: 'Kit de drone programável', data: '2024-01-15', valor: 'R$300,00', quantidade: 2, frete: 'R$ 10,00', formaPagamento: 'Cartão de Crédito', valorTotal: 'R$ 210,00', valorPorProduto: 'R$ 100,00' },
+        { id: 2, produto: 'Kitronik Kit de Robótica Simples', data: '2024-02-20', valor: 'R$120,00', quantidade: 1, frete: 'R$ 15,00', formaPagamento: 'Boleto', valorTotal: 'R$ 165,00', valorPorProduto: 'R$ 150,00' },
+        { id: 3, produto: 'Kit Carro robô', data: '2024-03-10', valor: 'R$290,00', quantidade: 3, frete: 'R$ 20,00', formaPagamento: 'PayPal', valorTotal: '620,00', valorPorProduto: 'R$ 200,00' },
     ];
     
     comprasAnteriores.innerHTML = '<h3>Compras Anteriores</h3>';

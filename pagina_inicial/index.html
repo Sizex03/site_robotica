@@ -11,7 +11,7 @@
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <h1>RoboStart</h1>
+            <img src="./imageinicio/logo2teste.png" alt="Logo da RoboStart"> <!-- Adicione o caminho correto da logo -->
         </div>
         <nav>
             <a href="#produtos">Produtos</a>
@@ -19,17 +19,31 @@
             <a href="#educacionais">Acessórios</a>
             <a href="#">Componentes Eletrônicos</a>
             <div class="search-container">
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." oninput="filterProducts()">
-                    <button>🔍</button>
-                </div>
+                <input type="text" id="search-input" placeholder="Pesquisar produtos..." oninput="filterProducts()">
+                <button>🔍</button>
             </div>
             <a href="#">login/cadastro</a>
-            <button id="cart-button">
-                🛒 <span id="cart-count">0</span>
-            </button>
+            <!-- Botão do carrinho já está no seu código -->
+                   <!-- Botão do carrinho já está no seu código -->
+                <button id="cart-button">
+                    🛒 <span id="cart-count">0</span>
+                </button>
+
+                <!-- Aba lateral do carrinho -->
+                <div id="cart-sidebar" class="cart-sidebar">
+                    <button id="close-cart" class="close-cart-btn">X</button>
+                    <h2>Carrinho de Compras</h2>
+                    <div id="cart-items"></div>
+                    <div class="cart-footer">
+                        <p><strong>Total:</strong> R$<span id="total-value">0,00</span></p>
+                        <button id="checkout-btn">Ir para o carrinho</button>
+                    </div>
+                </div>
+
+
         </nav>
     </header>
+    
   
 
     <!-- Carrossel -->
@@ -55,77 +69,69 @@
     <section class="produtos">
         <h2>Produtos Mais Vendidos</h2>
         <div class="produto-lista">
-            <!-- Repetir para cada produto -->
+            <!-- Produto 1 -->
             <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$100,00</p>
-                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <img src="../imagens/drone.png" alt="Produto 1">
+                <h3>Kit de drone programável</h3>
+                <p>kit educacional DIY de drone para o BBC micro:bit que você constrói, codifica e depois voa</p>
+                <p>Preço: R$300,00</p>
+                <button onclick="addToCart('Kit de drone programável', 300)">Adicionar ao Carrinho 🛒</button>
+                  <div class="avaliacao">★★★★★</div>
+            </div>
+            
+            <!-- Produto 2 -->
+            <div class="produto-item">
+                <img src="./imageinicio/microkit.png" alt="Produto 2">
+                <h3>Kitronik Kit de Robótica Simples </h3>
+                <p>construa seu próprio robô controlado por micro:bit de fácil construção.</p>
+                <p>Preço: R$120,00</p>
+                <button onclick="addToCart('Kitronik Kit de Robótica Simples', 120)">Adicionar ao Carrinho 🛒</button>
+                                <div class="avaliacao">★★★★★</div>
+            </div>
+            
+            <!-- Produto 3 -->
+            <div class="produto-item">
+                <img src="./imageinicio/robocarro.png" alt="Produto 3">
+                <h3>Kit Carro robô</h3>
+                <p>é a plataforma perfeita para explorar a inteligência artificial. De seguidor de linha a reconhecimento de objetos, as possibilidades são ilimitadas</p>
+                <p>Preço: R$290,00</p>
+                <button onclick="addToCart('Kit Carro robô', 290)">Adicionar ao Carrinho 🛒</button>
+               <div class="avaliacao">★★★★★</div>
+            </div>
+            
+            <!-- Produto 4 -->
+            <div class="produto-item">
+                <img src="./imageinicio/gatorobo.png" alt="Produto 4">
+                <h3>Gato Robô</h3>
+                <p>é o gato robótico mais leve e rápido que realmente anda. Construído em uma plataforma de código aberto, o projeto tem infinitas possibilidades na maneira como você pode “ensinar” truques, comportamentos e atitudes à medida que você o programa e o ajuda a crescer.</p>
+                <p>Preço: R$900,00</p>
+                <button onclick="addToCart('Gato Robô', 900)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
-            <!-- Repetir outros 5 produtos -->
-        
-    
-            <!-- Repetir para cada produto -->
+            
+            <!-- Produto 5 -->
             <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$100,00</p>
-                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <img src="./imageinicio/homemrobo.png" alt="Produto 5">
+                <h3>Robô bípede</h3>
+                <p>é um robô andador bípede com doze servos e seis graus de liberdade por perna. O design avançado das pernas apresenta flexibilidade incrível. </p>
+                <p>Preço: R$950,00</p>
+                <button onclick="addToCart('Robô bípede', 950)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
-            <!-- Repetir outros 5 produtos -->
-    
-        
-            <!-- Repetir para cada produto -->
+            
+            <!-- Produto 6 -->
             <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$100,00</p>
-                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
+                <img src="./imageinicio/educarobo.png" alt="Produto 6">
+                <h3>Robô de codificação</h3>
+                <p>é um robô de codificação para educação, ele fornece uma experiência divertida de aprendizado de programação para crianças a partir de 6 anos. </p>
+                <p>Preço: R$450,00</p>
+                <button onclick="addToCart('Robô de codificação', 450)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
-            <!-- Repetir outros 5 produtos -->
-        
-        
-            <!-- Repetir para cada produto -->
-            <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$100,00</p>
-                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
-                <div class="avaliacao">★★★★★</div>
-            </div>
-            <!-- Repetir outros 5 produtos -->
-        
-        
-            <!-- Repetir para cada produto -->
-            <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$100,00</p>
-                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
-                <div class="avaliacao">★★★★★</div>
-            </div>
-            <!-- Repetir outros 5 produtos -->
-        
-            <!-- Repetir para cada produto -->
-            <div class="produto-item">
-                <img src="produto1.jpg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do Produto 1</p>
-                <p>Preço: R$100,00</p>
-                <button onclick="addToCart('produto 1')">Adicionar ao Carrinho 🛒</button>
-                <div class="avaliacao">★★★★★</div>
-            </div>
-            <!-- Repetir outros 5 produtos -->
+            
         </div>
     </section>
+    
 
     <!-- Tutoriais de Práticas de Robótica -->
     <section class="tutoriais">
