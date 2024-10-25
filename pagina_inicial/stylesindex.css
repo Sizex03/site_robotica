@@ -111,8 +111,8 @@ nav a:hover {
 }
 
 #checkout-btn {
-    background-color: #fff; /* Botão branco */
-    color: #002147; /* Texto azul escuro */
+    background-color: #fff; 
+    color: #002147;
     padding: 10px;
     width: 100%;
     border: none;
@@ -121,12 +121,12 @@ nav a:hover {
 }
 
 #checkout-btn:hover {
-    background-color: #f1f1f1; /* Cor clara ao passar o mouse */
+    background-color: #f1f1f1; 
 }
 
 .close-cart-btn {
-    background-color: #fff; /* Botão de fechar branco */
-    color: #002147; /* Texto azul escuro */
+    background-color: #fff; 
+    color: #002147; 
     border: none;
     padding: 5px 10px;
     font-size: 18px;
