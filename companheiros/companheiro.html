@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboStart - Companheiros Robóticos</title>
+    <link rel="stylesheet" href="companheiro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../pagina_inicial/index.html">
+                <img src="../pagina_inicial/imageinicio/logo2teste.png" alt="Logo da RoboStart">
+            </a> 
+        </div>
+        <nav>
+            <a href="../Produtos/produtos.html">Produtos</a>
+            <a href="../companheiros/companheiros.html">Companheiros</a>
+            <a href="../kits/kits.html">Kits de Montagem</a>
+            <a href="../educacao/educacao.html">Educação</a>
+            <a href="../login/login.html">Login/Cadastro</a>
+            <button id="cart-button">
+                🛒 <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Companheiros Robóticos</h1>
+            <p>Um amigo para você programar e evoluir suas habilidades em robótica!</p>
+            <a href="#produtos" class="cta-button">Explore Agora</a>
+        </div>
+        <div class="hero-image">
+            <img src="./robo.png" alt="Robô amigo">
+        </div>
+    </section>
+
+    <section class="produtos" id="produtos">
+        <h2>Conheça Nossos Companheiros Robóticos</h2>
+        <div class="produto-lista">
+            <div class="produto-item">
+                <img src="../imagens/robo1.png" alt="MechDog">
+                <h3>MechDog</h3>
+                <p>Um pequeno e poderoso cão robô equipado com um controlador ESP32, perfeito para iniciantes!</p>
+                <div class="Preço">Preço: R$299,99</div>
+                <button onclick="addToCart('MechDog')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+            <div class="produto-item">
+                <a href="../produto-especifico/produtoEspecifico.html">
+                    <img src="../imagens/robo_amigo.png" alt="Robô Assistente Doméstico">
+                </a>
+                <h3>Robô Assistente Doméstico</h3>
+                <p>Seu companheiro no dia a dia, ajudando em suas tarefas com eficiência e inovação.</p>
+                <div class="Preço">Preço: R$350,00</div>
+                <button onclick="addToCart('Robô Assistente Doméstico')">Adicionar ao Carrinho 🛒</button>
+                <div class="avaliacao">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>Na RoboStart, transformamos ideias em código, criando robôs para entusiastas e profissionais. Seja bem-vindo ao futuro da robótica!</p>
+    </section>
+
+    <footer>
+        <h3>Contate-nos</h3>
+        <p>Email: contato@robostart.com.br</p>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Endereço: Rua Exemplo, 123, São Paulo, SP</p>
+    </footer>
+
+    <script src="companheiro.js"></script>
+</body>
+</html>
