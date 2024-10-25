@@ -94,6 +94,17 @@ h2 {
     color: #333;
 }
 
+/* Carrossel */
+.carouseel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carouseel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
 .carousel {
     position: relative;
     overflow: hidden;
