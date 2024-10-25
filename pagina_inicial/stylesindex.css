@@ -154,7 +154,7 @@ nav a:hover {
 }
 
 #cart-button span {
-    background-color: red;
+    background-color: rgb(185, 1, 1);
     border-radius: 50%;
     padding: 2px 6px;
     font-size: 14px;
@@ -165,10 +165,19 @@ nav a:hover {
 
 .produtos {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #e3f2fd;
     padding: 20px;
 }
+.avaliacao{
+    color: #001f3f;
+    font-size: 20px;
 
+}
+
+.preco{
+    color: #e74c3c; /* Cor do preço */
+    font-weight: bold;
+}
 .produto-lista {
     display: flex;
     justify-content: space-around; 
@@ -222,7 +231,7 @@ nav a:hover {
 /* Tutoriais */
 .tutoriais {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #e3f2fd;
     padding: 20px;
 }
 
@@ -239,7 +248,7 @@ nav a:hover {
 
 .sobre-nos {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #e3f2fd;
     padding: 20px;
 }
 

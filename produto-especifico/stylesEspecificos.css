@@ -143,6 +143,12 @@ main {
     margin-bottom: 20px;
 }
 
+
+.avaliacao{
+     color:#ffeb3b;
+     font-size: 30px;
+}
+
 .description {
     font-size: 1em;
     line-height: 1.6;
@@ -194,10 +200,15 @@ button:hover {
     border-radius: 8px;
 }
 
-footer {
-    margin-top: 50px;
-    background-color: #1e90ff;
-    color: white;
+.sobre-nos {
     text-align: center;
+    background-color: #e3f2fd;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #001f3f; 
+    color: #ffffff;
     padding: 10px;
 }

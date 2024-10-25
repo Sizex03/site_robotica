@@ -127,7 +127,7 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    background-color: #fff;
+    background-color: #f0f4c3;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -157,7 +157,7 @@ h2 {
 
 .product-card button {
     padding: 10px 15px;
-    background-color: #27ae60; /* Cor do botão */
+    background-color: #001f3f; /* Cor do botão */
     color: white;
     border: none;
     border-radius: 5px;
@@ -166,7 +166,7 @@ h2 {
 }
 
 .product-card button:hover {
-    background-color: #219653; /* Cor do botão ao passar o mouse */
+    background-color: #003366; /* Cor do botão ao passar o mouse */
 }
 
 .product-card:hover {
@@ -204,13 +204,13 @@ h2 {
 /* Sobre nós */
 .sobre-nos {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #e3f2fd;
     text-align: center;
 }
 
 /* Rodapé */
 footer {
-    background-color: #222;
+    background-color: #001f3f;
     color: #fff;
     padding: 20px;
     text-align: center;
