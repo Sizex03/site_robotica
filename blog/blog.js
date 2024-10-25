@@ -1,5 +1,4 @@
-// Dados de exemplo para exibir no blog
-// Dados de exemplo para exibir no blog
+
 const noticias = [
     { titulo: "Robôs Optimus foram controlados parcialmente por humanos em evento da Tesla", conteudo: "A interação dos robôs humanoides Optimus com o público no evento da Tesla realizado na última semana foi um dos destaques da conferência...", img: "./imgblog/noticia1.png", link: "https://www.tecmundo.com.br/produto/293904-robos-optimus-controlados-parcialmente-humanos-evento-tesla.htm" },
     { titulo: "Boston Dynamics e Toyota fecham acordo para adicionar IA ao robô Atlas", conteudo: "A fabricante Boston Dynamics anunciou nesta quarta-feira (16) uma parceria com um instituto de pesquisa da Toyota...", img: "./imgblog/not2.png", link: "https://www.tecmundo.com.br/software/293889-boston-dynamics-toyota-fecham-acordo-adicionar-ia-robo-atlas.htm" },
@@ -16,7 +15,7 @@ const noticias = [
 function renderCarousel() {
     const carouselContainer = document.querySelector('.carousel-container');
 
-    // Limpa o conteúdo existente
+
     carouselContainer.innerHTML = '';
 
     // Adiciona cada notícia ao carrossel
@@ -37,7 +36,6 @@ function renderCarousel() {
 }
 
 
-// Inicializando o conteúdo do carrossel
 renderCarousel();
 
 // Lógica do carrossel
@@ -45,29 +43,28 @@ let currentIndex = 0;
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
 
-// Atualiza a visualização do carrossel
+// visualização do carrossel
 function updateCarousel() {
-    const offset = currentIndex * -100 / 3; // Calcular o deslocamento baseado na largura
+    const offset = currentIndex * -100 / 3; 
     const carouselContainer = document.querySelector('.carousel-container');
-    carouselContainer.style.transform = `translateX(${offset}%)`; // Desloca o carrossel
+    carouselContainer.style.transform = `translateX(${offset}%)`; 
 }
 
 // Navegação manual
 document.getElementById('next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % (Math.ceil(totalItems / 3)); // Incrementa e faz a rotação
+    currentIndex = (currentIndex + 1) % (Math.ceil(totalItems / 3)); 
     updateCarousel();
 });
 
 document.getElementById('prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + Math.ceil(totalItems / 3)) % (Math.ceil(totalItems / 3)); // Decrementa e faz a rotação
+    currentIndex = (currentIndex - 1 + Math.ceil(totalItems / 3)) % (Math.ceil(totalItems / 3)); 
     updateCarousel();
 });
 
-// Atualização automática do carrossel
 setInterval(() => {
-    currentIndex = (currentIndex + 1) % (Math.ceil(totalItems / 3)); // Incrementa a cada 3 segundos
+    currentIndex = (currentIndex + 1) % (Math.ceil(totalItems / 3)); 
     updateCarousel();
-}, 3000); // 3000 ms = 3 segundos
+}, 3000); 
 
-// Inicializa o carrossel
+
 updateCarousel();
