@@ -1,18 +1,17 @@
-/*cabeçalho*/
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e3f2fd; 
+    background-color: #f4f8fc;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #001f3f; 
+    background-color: #001f3f;
     color: #ffffff;
-    padding: 15px;
+    padding: 10px 20px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -20,50 +19,16 @@ header .logo img {
     height: 50px; 
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
-
 nav a {
-    color: #f0f4c3; 
+    color: #f0f4c3;
     margin: 0 15px;
     text-decoration: none;
+    font-size: 16px; 
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ffeb3b; 
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    border-radius: 25px;
-    overflow: hidden;
-    background-color: #ffffff;
-}
-
-.search-container input[type="text"] {
-    border: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    outline: none;
-    border-radius: 25px 0 0 25px; 
-}
-
-.search-container button {
-    padding: 8px 12px;
-    background-color: #ffeb3b; 
-    border: none;
-    color: #001f3f; 
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 0 25px 25px 0; 
-}
-
-.search-container button:hover {
-    background-color: #ffe082; 
+    color: #ffeb3b;
 }
 
 #cart-button {
@@ -78,96 +43,128 @@ nav a:hover {
 #cart-button span {
     background-color: red;
     border-radius: 50%;
-    padding: 2px 6px;
+    padding: 4px 8px;
     font-size: 14px;
     position: absolute;
     top: -5px;
-    right: -10px; /* Ajuste a posição conforme necessário */
+    right: -15px;
 }
-/*---cabeçalho
 
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #e3f2fd;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #001f3f;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #003366;
+}
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+}
 
 /* Produtos */
 .produtos {
     text-align: center;
-    background-color: #e3f2fd;
-    padding: 20px;
-}
-.Preço{
-    color:#e74c3c;
-    font-weight: bold;
+    background-color: #f4f8fc;
+    padding: 40px;
 }
 
-.avaliacao{
-    color:#001f3f;
-    font-size: 20px;
+.produtos h2 {
+    font-size: 36px;
+    color: #001f3f;
+    margin-bottom: 30px;
 }
 
 .produto-lista {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .produto-item {
-    width: calc(30% - 20px); 
-    background-color: #f0f4c3; 
-    padding: 10px;
-    margin: 10px; 
+    width: calc(30% - 20px);
+    background-color: #f0f4c3;
+    padding: 15px;
+    margin: 15px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .produto-item img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
 .produto-item h3 {
-    margin: 10px 0; 
-    font-size: 18px; 
-    color: #001f3f; 
+    margin: 10px 0;
+    font-size: 20px;
+    color: #001f3f;
 }
 
 .produto-item p {
-    font-size: 14px; 
-    color: #333; 
+    font-size: 14px;
+    color: #333;
 }
 
 .produto-item button {
-    background-color: #001f3f; 
+    background-color: #001f3f;
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 5px;
 }
 
 .produto-item button:hover {
-    background-color: #003366; 
+    background-color: #003366;
 }
 
-/* Sobre nós */
+/* Seção Sobre Nós */
 .sobre-nos {
-    padding: 20px;
+    padding: 30px;
     background-color: #e3f2fd;
     text-align: center;
 }
 
-/* Rodapé */
 footer {
     background-color: #001f3f;
     color: #fff;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
-
 
 /* CARRINHO */
 .cart-sidebar {
