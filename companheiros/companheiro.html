@@ -6,6 +6,8 @@
     <title>RoboStart - Companheiros Robóticos</title>
     <link rel="stylesheet" href="companheiro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+
 </head>
 <body>
     <header>
@@ -18,11 +20,23 @@
             <a href="../Produtos/produtos.html">Produtos</a>
             <a href="../companheiros/companheiros.html">Companheiros</a>
             <a href="../kits/kit.html">Kits de Montagem</a>
-            <a href="../educacao/educacao.html">Educação</a>
+            <a href="../todos-os-produtos/todos-os-produtos.html">Educação</a>
             <a href="../login/login.html">Login/Cadastro</a>
+            <a href="../blog/blog.html">Blog</a>
+
             <button id="cart-button">
                 🛒 <span id="cart-count">0</span>
             </button>
+
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button id="close-cart" class="close-cart-btn">X</button>
+                <h2>Carrinho de Compras</h2>
+                <div id="cart-items"></div>
+                <div class="cart-footer">
+                    <p><strong>Total:</strong> R$<span id="total-value">0,00</span></p>
+                    <button id="checkout-btn">Ir para o carrinho</button>
+                </div>
+            </div>
         </nav>
     </header>
     
@@ -45,7 +59,7 @@
                 <h3>MechDog</h3>
                 <p>Um pequeno e poderoso cão robô equipado com um controlador ESP32, perfeito para iniciantes!</p>
                 <div class="Preço">Preço: R$299,99</div>
-                <button onclick="addToCart('MechDog')">Adicionar ao Carrinho 🛒</button>
+                <button onclick="addToCart('MechDog', 299,99)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
             <div class="produto-item">
@@ -55,7 +69,7 @@
                 <h3>Robô Assistente Doméstico</h3>
                 <p>Seu companheiro no dia a dia, ajudando em suas tarefas com eficiência e inovação.</p>
                 <div class="Preço">Preço: R$350,00</div>
-                <button onclick="addToCart('Robô Assistente Doméstico')">Adicionar ao Carrinho 🛒</button>
+                <button onclick="addToCart('Robô Assistente Doméstico', 350)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
             <div class="produto-item">
@@ -65,7 +79,7 @@
                 <h3>Robô Amigo</h3>
                 <p>Seu companheiro no dia a dia, com funcionalidades que vão além da sua imaginação</p>
                 <div class="Preço">Preço: R$430,00</div>
-                <button onclick="addToCart('Robô amigo')">Adicionar ao Carrinho 🛒</button>
+                <button onclick="addToCart('Robô amigo', 430)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
             <div class="produto-item">
@@ -75,7 +89,7 @@
                 <h3>Robô lutador</h3>
                 <p>Seu novo robô favorito para prograar pequenas disputas incríves</p>
                 <div class="Preço">Preço: R$289,00</div>
-                <button onclick="addToCart('Robô lutador')">Adicionar ao Carrinho 🛒</button>
+                <button onclick="addToCart('Robô lutador', 289)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
             

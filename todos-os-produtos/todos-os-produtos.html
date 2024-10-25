@@ -6,6 +6,8 @@
     <title>RoboStart - Transformando ideias em código</title>
     <link rel="stylesheet" href="style-todosProdutos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -20,6 +22,9 @@
             <a href="../companheiros/companheiro.html">Companheiros</a>
             <a href="../todos-os-produtos/todos-os-produtos.html">Robótica de Consumo</a>
             <a href="../todos-os-produtos/todos-os-produtos.html">Educação</a>
+            <a href="../blog/blog.html">Blog</a>
+
+            
             <div class="search-container">
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Pesquisar produtos..." oninput="filterProducts()">
@@ -30,12 +35,32 @@
             <button id="cart-button">
                 🛒 <span id="cart-count">0</span>
             </button>
+
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button id="close-cart" class="close-cart-btn">X</button>
+                <h2>Carrinho de Compras</h2>
+                <div id="cart-items"></div>
+                <div class="cart-footer">
+                    <p><strong>Total:</strong> R$<span id="total-value">0,00</span></p>
+                    <button id="checkout-btn">Ir para o carrinho</button>
+                </div>
+            </div>
         </nav>
     </header>
     
        
     </section>
 
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Robôs aliados a educação</h1>
+            <p>Explore nossos produtos.</p>
+            <a href="#produtos" class="cta-button">Explore Agora</a>
+        </div>
+        <div class="hero-image">
+            <img src="./robosessao.png" alt="Robô amigo">
+        </div>
+    </section>
 
     <section class="produtos">
         <h2>Kits de Montagem</h2>
@@ -46,7 +71,7 @@
                 <h3>Kit Robô Simples</h3>
                 <p>Com este kit você pode aprender a montagem básica de um mini robô!</p>
                 <div class="Preço">Preço: R$500,00</div>
-                <button onclick="addToCart('Kit Robô Simples')">Adicionar ao Carrinho 🛒</button>
+                <button onclick="addToCart('Kit Robô Simples', 500)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
             <!-- Repetir outros 5 produtos -->
@@ -58,7 +83,7 @@
                 <h3>Kit de Drone Programável</h3>
                 <p>kit educacional DIY de drone para o BBC micro:bit que você constrói, codifica e depois voa</p>
                 <div class="Preço">Preço: R$300,00</div>
-                <button onclick="addToCart('Kit de Drone Programável')">Adicionar ao Carrinho 🛒</button>
+                <button onclick="addToCart('Kit de Drone Programável', 300)">Adicionar ao Carrinho 🛒</button>
                 <div class="avaliacao">★★★★★</div>
             </div>
         </div>
@@ -73,25 +98,23 @@
                         <h3>MechDog</h3>
                         <p>MechDog é um pequeno, mas poderoso cão robô equipado com um controlador ESP32, perfeito para iniciantes!</p>
                         <div class="Preço">Preço: R$299,99</div>
-                        <button onclick="addToCart('MechDog')">Adicionar ao Carrinho 🛒</button>
+                        <button onclick="addToCart('MechDog', 299,99)">Adicionar ao Carrinho 🛒</button>
                         <div class="avaliacao">★★★★★</div>
                     </div>
-                    <!-- Repetir outros 5 produtos -->
+                   
                 
-            
-                    <!-- Repetir para cada produto -->
                     <div class="produto-item">
                         <a href="../produto-especifico/produtoEspecifico.html">
                         <img src="../imagens/robo_amigo.png" alt="Robô Assistente Doméstico"></a>
                         <h3>Robô Assistente Doméstico</h3>
                         <p>Este robô será seu companheiro do dia a dia, auxiliando em suas tarefas.</p>
                         <div class="Preço">Preço: R$350,00</div>
-                        <button onclick="addToCart('Robô Assistente Doméstico')">Adicionar ao Carrinho 🛒</button>
+                        <button onclick="addToCart('Robô Assistente Doméstico', 350)">Adicionar ao Carrinho 🛒</button>
                         <div class="avaliacao">★★★★★</div>
                     </div>
                 </div>
                 </section>
-                    <!-- Repetir outros 5 produtos -->
+                    
                     <section class="produtos">
                         <h2>Robótica de Consumo</h2>
                         <div class="produto-lista">
@@ -101,47 +124,43 @@
                                 <h3>Caixa de Areia Automática</h3>
                                 <p>Com essa caixa de areia que se auto-higieniza, seus dias como "pai de pet" se tornarão mais fáceis!</p>
                                 <div class="Preço">Preço: R$220,00</div>
-                                <button onclick="addToCart('Caixa de Areia Automática')">Adicionar ao Carrinho 🛒</button>
+                                <button onclick="addToCart('Caixa de Areia Automática', 220)">Adicionar ao Carrinho 🛒</button>
                                 <div class="avaliacao">★★★★★</div>
                             </div>
-                            <!-- Repetir outros 5 produtos -->
-                        
-                    
-                            <!-- Repetir para cada produto -->
+         
+
                             <div class="produto-item">
                                 <img src="../imagens/robo_limpeza3.png" alt="Caixa de Areia Automática 2.0">
                                 <h3>Caixa de Areia Automática 2.0</h3>
                                 <p>Essa caixa de areia é o modelo de automatização de limpeza mais atual do mercado.</p>
                                 <div class="Preço">Preço: R$450,00</div>
-                                <button onclick="addToCart('Caixa de Areia Automática 2.0')">Adicionar ao Carrinho 🛒</button>
+                                <button onclick="addToCart('Caixa de Areia Automática 2.0', 450)">Adicionar ao Carrinho 🛒</button>
                                 <div class="avaliacao">★★★★★</div>
                             </div>
                         </div>
 
                      </section>
-                      <!-- Repetir outros 5 produtos -->
+                
                       <section class="produtos">
                         <h2>Educação</h2>
                         <div class="produto-lista">
-                            <!-- Repetir para cada produto -->
+                       
                             <div class="produto-item">
                                 <img src="../imagens/braço_mecanico1.png" alt="Braços Robóticos Modulares">
                                 <h3>Braço Robótico Modular</h3>
                                 <p>Esse braço robótico possui a flexibilidade que você necessita!</p>
                                 <div class="Preço">Preço: R$199,99</div>
-                                <button onclick="addToCart('Braços Robóticos Modulares')">Adicionar ao Carrinho 🛒</button>
+                                <button onclick="addToCart('Braços Robóticos Modulares', 199,99)">Adicionar ao Carrinho 🛒</button>
                                 <div class="avaliacao">★★★★★</div>
                             </div>
-                            <!-- Repetir outros 5 produtos -->
-                        
-                    
-                            <!-- Repetir para cada produto -->
+                
+
                             <div class="produto-item">
                                 <img src="../imagens/braço-robo1.png" alt="Braço Robótico">
                                 <h3>Braço Robótico</h3>
                                 <p>Esse é o modelo de braço robótico mais utilizado nas faculdades e universidades!</p>
                                 <div class="Preço">Preço: R$499,99</div>
-                                <button onclick="addToCart('Braço Robótico')">Adicionar ao Carrinho 🛒</button>
+                                <button onclick="addToCart('Braço Robótico', 499,99)">Adicionar ao Carrinho 🛒</button>
                                 <div class="avaliacao">★★★★★</div>
                             </div>
                         </div>
