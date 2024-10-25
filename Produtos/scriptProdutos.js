@@ -22,7 +22,7 @@ let cartCount = 0; // Variável para contar itens no carrinho
 function addToCart(productName) {
     cartCount++; // Incrementa o contador de itens no carrinho
     document.getElementById('cart-count').textContent = cartCount; // Atualiza o contador no botão
-    alert(`${productName} foi adicionado ao carrinho!`);
+    
 }
 
     const productImages = document.querySelectorAll('.product-image');
