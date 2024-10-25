@@ -191,3 +191,18 @@ h2 {
 .carousel-button.right {
     right: 10px; /* Ajuste para garantir que esteja visível */
 }
+
+/* Sobre nós */
+.sobre-nos {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

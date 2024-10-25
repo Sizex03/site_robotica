@@ -25,4 +25,22 @@ function addToCart(productName) {
     alert(`${productName} foi adicionado ao carrinho!`);
 }
 
+    const productImages = document.querySelectorAll('.product-image');
+
+    // Itera sobre cada imagem e adiciona os eventos 'mouseover' e 'mouseout'
+    productImages.forEach(function(image) {
+        image.addEventListener('mouseover', function() {
+            // Altera a imagem para o valor armazenado no atributo data-hover
+            image.src = image.getAttribute('data-hover');
+        });
+
+        image.addEventListener('mouseout', function() {
+            // Retorna à imagem original armazenada no atributo data-default
+            image.src = image.getAttribute('data-default');
+        });
+    });
+
+
+
+
 
