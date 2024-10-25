@@ -1,5 +1,4 @@
 /* Estilos gerais */
-/*cabeçalho*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,13 +10,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #002147; 
     color: #ffffff;
     padding: 15px;
 }
 
 header .logo img {
-    height: 50px;
+    height: 50px; 
 }
 
 nav {
@@ -32,7 +31,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #f39c12; /* Cor de hover */
+    color: #f39c12; 
 }
 
 .search-container {
@@ -42,6 +41,7 @@ nav a:hover {
     overflow: hidden;
     background-color: white;
 }
+
 .search-container input[type="text"] {
     border: none;
     padding: 8px 12px;
@@ -51,7 +51,7 @@ nav a:hover {
 
 .search-container button {
     padding: 8px 12px;
-    background-color: #f39c12; /* Cor do botão de pesquisa */
+    background-color: #f39c12; 
     border: none;
     color: white;
     cursor: pointer;
@@ -59,8 +59,87 @@ nav a:hover {
 }
 
 .search-container button:hover {
-    background-color: #e67e22; /* Cor do botão ao passar o mouse */
+    background-color: #e67e22; 
 }
+
+/* Estilo da aba lateral do carrinho */
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #002147; /* Azul escuro */
+    color: #fff; /* Texto branco */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease, visibility 0.3s, opacity 0.3s; /* Transição suave */
+    
+    visibility: hidden; /* Invisível por padrão */
+    opacity: 0; /* Transparente por padrão */
+    transform: translateX(100%); /* Empurrado fora da tela */
+}
+
+.cart-sidebar.open {
+    visibility: visible; /* Visível quando aberto */
+    opacity: 1; /* Totalmente visível */
+    transform: translateX(0); /* Traz de volta para a tela */
+}
+
+.cart-footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#cart-items {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#cart-items div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cart-items input {
+    width: 40px;
+    text-align: center;
+}
+
+#checkout-btn {
+    background-color: #fff; 
+    color: #002147;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+    background-color: #f1f1f1; 
+}
+
+.close-cart-btn {
+    background-color: #fff; 
+    color: #002147; 
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-cart-btn:hover {
+    background-color: #f1f1f1;
+}
+
 
 #cart-button {
     position: relative;
@@ -78,12 +157,8 @@ nav a:hover {
     font-size: 14px;
     position: absolute;
     top: -5px;
-    right: -10px; /* Ajuste a posição conforme necessário */
+    right: -10px; 
 }
-/*---cabeçalho
-
-
-
 
 /* Carrossel */
 .carousel {
@@ -97,7 +172,7 @@ nav a:hover {
     transition: transform 0.5s ease;
 }
 
-/* Produtos */
+
 .produtos {
     text-align: center;
     background-color: #fff;
@@ -106,42 +181,44 @@ nav a:hover {
 
 .produto-lista {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; 
     flex-wrap: wrap;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .produto-item {
-    width: 30%;
+    width: calc(33.33% - 20px); 
     background-color: #f9f9f9;
     padding: 10px;
-    margin: 10px;
+    margin: 10px; 
     border: 1px solid #ccc;
     text-align: left;
+    box-sizing: border-box; 
+}
+
+.produto-item img {
+    width: 100%; 
+    height: auto; 
+}
+
+
+.produto-item h3 {
+    margin: 10px 0 5px; 
 }
 
 .produto-item button {
     padding: 10px 15px;
-    background-color: #333; /* Cor do botão */
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; 
-
+    transition: background-color 0.3s;
 }
 
-.produto-item button:hover{
-    background-color: #636363; /* Cor do botão ao passar o mouse */
-}
-
-
- 
-
-
-.tutoriais-lista{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.produto-item button:hover {
+    background-color: #636363; 
 }
 
 /* Tutoriais */
@@ -149,6 +226,12 @@ nav a:hover {
     text-align: center;
     padding: 20px;
     background-color: #fff;
+}
+
+.tutoriais-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 /* Sobre nós */
