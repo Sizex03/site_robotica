@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte ajustada para ser consistente com o restante */
+    font-family: 'Roboto', sans-serif; 
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
@@ -10,13 +10,13 @@ body {
     margin: auto;
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
     text-align: center;
-    color: #003366; /* Azul marinho escuro */
+    color: #003366; 
 }
 
 .input-group {
@@ -33,28 +33,28 @@ h2 {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Arredondar os campos de entrada */
+    border-radius: 8px; 
     font-size: 16px;
 }
 
 .input-group input:focus {
-    border-color: #003366; /* Azul marinho escuro ao focar */
+    border-color: #003366; 
     outline: none;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #003366; /* Azul marinho escuro */
+    background-color: #003366; 
     color: white;
     border: none;
-    border-radius: 8px; /* Arredondar os cantos do botão */
+    border-radius: 8px; 
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #002244; /* Tom mais escuro de azul marinho no hover */
+    background-color: #002244; 
 }
 
 p {
