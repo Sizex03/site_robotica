@@ -1,79 +1,84 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
-}
-
-.container {
     display: flex;
-    height: 100vh;
+    margin: 0; /* Remove margem padrão do body */
+    height: 100vh; /* Preenche a altura da tela */
 }
 
 .sidebar {
     width: 250px;
-    background-color: white;
+    background-color: #f5f5f5;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative; 
 }
 
-.profile {
-    text-align: center;
+.perfil {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
     margin-bottom: 20px;
 }
 
-.profile-circle {
-    width: 60px;
-    height: 60px;
-    background-color: brown;
-    border-radius: 50%;
-    margin: 0 auto;
+
+.sidebar img {
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
 }
 
-.profile-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: relative;
-    top: -60px;
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-top: 10px; 
+    text-align: center; 
 }
 
-.nav {
+.sidebar ul {
+    list-style: none;
+    padding: 0;
     margin-top: 20px;
 }
 
-.nav-link {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    border-radius: 4px;
+.sidebar ul li {
+    cursor: pointer;
+    margin: 15px 0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+    text-align: center; 
 }
 
-.nav-link:hover {
-    background-color: #efefef;
+.sidebar ul li:hover {
+    background-color: #ddd; 
 }
 
 .content {
-    flex-grow: 1;
+    flex-grow: 1; 
     padding: 20px;
+    background-color: #fff; 
 }
 
-#content-area {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.info-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
 }
 
-.purchase-card {
-    background-color: #e9ecef;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 10px 0;
+#voltar {
+    margin-top: 20px;
     cursor: pointer;
-    transition: box-shadow 0.3s;
+    padding: 10px 15px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
 }
 
-.purchase-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+#voltar:hover {
+    background-color: #0056b3; 
 }

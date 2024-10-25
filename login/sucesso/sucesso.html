@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucesso</title>
+    <title>Página de Sucesso</title>
     <link rel="stylesheet" href="sucesso.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <div class="profile-circle"></div>
-                <img src="../sucesso/image-login/image.png" alt="Foto do usuário" class="profile-image"> 
-                <h3>Marcos Silva</h3>
-            </div>
-            <nav class="nav">
-                <a href="#" class="nav-link" id="info-pessoais">Informações Pessoais</a>
-                <a href="#" class="nav-link" id="info-endereco">Informações de Endereço</a>
-                <a href="#" class="nav-link" id="compras-anteriores">Compras Anteriores</a>
-                <a href="#" class="nav-link" id="cupons-desconto">Cupons de Desconto Disponíveis</a>
-                <a href="../../pagina_inicial/index.html" class="nav-link" id="voltar-inicio">Voltar para Produtos</a>
-            </nav>
-        </aside>
-        <main class="content">
-            <div id="content-area">
-                <h2>Olá Marcos!</h2>
-            </div>
-        </main>
+    <div class="sidebar">
+        <div class="perfil">
+            <div class="bolinha"></div>
+            <img src="./image-login/image.png" alt="Foto de Perfil">
+        </div>
+        <h2 id="saudacao">Bem-Vindo!</h2>
+        <ul>
+            <li id="info-pessoais-btn">Informações Pessoais</li>
+            <li id="info-endereco-btn">Informações de Endereço</li>
+            <li id="compras-anteriores-btn">Compras Anteriores</li>
+            <li id="cupons-btn">Cupons de Desconto Disponíveis</li>
+        </ul>
+        <button id="voltar">Voltar para Produtos</button>
     </div>
+    <main class="content">
+        <div id="content-area">
+            <h2>Olá <span id="nome-usuario"></span>!</h2>
+            <div id="info-pessoais" class="info-section" style="display: none;"></div>
+            <div id="info-endereco" class="info-section" style="display: none;"></div>
+            <div id="compras-anteriores" class="info-section" style="display: none;"></div>
+            <div id="cupons" class="info-section" style="display: none;"></div>
+        </div>
+    </main>
     <script src="sucesso.js"></script>
 </body>
 </html>
